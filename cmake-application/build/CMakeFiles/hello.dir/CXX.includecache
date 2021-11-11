@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/hello-app.hpp
+cstdio
+-
+string
+-
+
+/home/mig/Documents/github/project-examples/cmake-application/src/hello-app.cpp
+iostream
+-
+cstdio
+-
+hello-app.hpp
+/home/mig/Documents/github/project-examples/cmake-application/src/hello-app.hpp
+

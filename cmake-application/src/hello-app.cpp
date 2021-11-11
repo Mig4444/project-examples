@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdio>
-#include "../include/hello-app.h"
+#include "hello-app.hpp"
 
 int main(int argc, char *argv[])
 {
