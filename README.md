@@ -1,1 +1,3 @@
-project examples, exploratory test and templates
+# project-examples
+
+Collection of project samples to get started.
