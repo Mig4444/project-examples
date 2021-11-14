@@ -1,3 +1,0 @@
-/home/mig/Documents/github/project-examples/cmake-application/build/CMakeFiles/rebuild_cache.dir
-/home/mig/Documents/github/project-examples/cmake-application/build/CMakeFiles/edit_cache.dir
-/home/mig/Documents/github/project-examples/cmake-application/build/CMakeFiles/hello.dir
