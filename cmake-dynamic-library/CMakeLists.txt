@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(calculateangle)
+set(CMAKE_BUILD_TYPE Release)
+include_directories(include)
+file(GLOB SOURCE "my_library/*.cpp")
+add_library(mylibrary SHARED ${SOURCE})
+install(TARGETS mylibrary DESTINATION /usr/lib)

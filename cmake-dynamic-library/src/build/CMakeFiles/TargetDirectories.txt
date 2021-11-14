@@ -1,0 +1,3 @@
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/src/build/CMakeFiles/rebuild_cache.dir
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/src/build/CMakeFiles/edit_cache.dir
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/src/build/CMakeFiles/main.dir

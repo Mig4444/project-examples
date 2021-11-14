@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libmy_library.so -o libmy_library.so CMakeFiles/my_library.dir/my_library/mylibrary.cpp.o 

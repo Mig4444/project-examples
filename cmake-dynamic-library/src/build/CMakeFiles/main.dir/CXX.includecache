@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/include/my_library.hpp
+iostream
+-
+cmath
+-
+
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/src/main.cpp
+iostream
+-
+cstdio
+-
+my_library.hpp
+/home/mig/Documents/github/project-examples/cmake-dynamic-library/src/my_library.hpp
+
