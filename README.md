@@ -9,7 +9,7 @@ Collection of project samples to get started.
 ### CMake based projects
 
 - [cmake-application](cmake-application/README.md)
-- [cmake-dynamic-library]
+- [cmake-dynamic-library](cmake-dynamic-library/README.md)
 - [cmake-static-library]
 - [cmake-application-using-dynamic-library]
 - [cmake-application-using-static-library]
