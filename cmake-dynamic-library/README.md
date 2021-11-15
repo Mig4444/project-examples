@@ -3,11 +3,9 @@
 ## Description
 
 This is an example of a cmake based application project.
-Two cmmakes used. 
-First, to create the shared library.   
-Second to create an application using the shared library
+CMake generates a shared library (*.so file )
 This projet generates an shared library file.
-The application calculate the average between two  angles.
+The ashared library calculates the average between two  angles.
 
 ## Build
 
