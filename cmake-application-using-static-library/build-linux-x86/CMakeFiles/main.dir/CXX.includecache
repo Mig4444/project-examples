@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/libCalcInterExtraPolation.hpp
+
+/home/mig/Documents/github/project-examples/cmake-application-using-static-library/src/main.cpp
+iostream
+-
+iterator
+-
+map
+-
+libCalcInterExtraPolation.hpp
+/home/mig/Documents/github/project-examples/cmake-application-using-static-library/src/libCalcInterExtraPolation.hpp
+
