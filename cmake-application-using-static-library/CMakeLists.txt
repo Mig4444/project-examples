@@ -5,7 +5,7 @@ project (TestStaticLibrary)
 set ( PROJECT_LINK_LIBS liblibCalcInterExtraPolation.a )
 link_directories(~/Documents/github/project-examples/cmake-static-library/build-linux-x86)
 
-include_directories(~/Documents/github/project-examples/cmake-application-using-static-library/include)
+include_directories(include)
  
 add_executable(main src/main.cpp)
 target_link_libraries(main ${PROJECT_LINK_LIBS} )

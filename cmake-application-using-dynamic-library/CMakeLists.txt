@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
-project (TestLibrary)
+project (TestDynamicLibrary)
  
 #For the shared library:
 set ( PROJECT_LINK_LIBS libmy_library.so )
-link_directories(~/Documents/github/project-examples/cmake-application-using-dynamic-library/build-linux-x86)
+link_directories(build-linux-x86)
 
-include_directories(~/Documents/github/project-examples/cmake-application-using-dynamic-library/include)
- 
+include_directories(include)
  
 add_executable(main src/main.cpp)
 target_link_libraries(main ${PROJECT_LINK_LIBS} )
