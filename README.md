@@ -10,8 +10,6 @@ Collection of project samples to get started.
 
 - [cmake-application](cmake-application/README.md)
 - [cmake-dynamic-library](cmake-dynamic-library/README.md)
-- [cmake-static-library]
-- [cmake-application-using-dynamic-library]
-- [cmake-application-using-static-library]
-
-
+- [cmake-static-library](cmake-static-library/README.md)
+- [cmake-application-using-dynamic-library](cmake-application-using-dynamic-library/README.md)
+- [cmake-application-using-static-library](cmake-application-using-static-library/README.md)
