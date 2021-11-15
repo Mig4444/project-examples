@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(libCalcInterExtraPolation)
+set(CMAKE_BUILD_TYPE Release)
+include_directories(include)
+file(GLOB SOURCE "libCalcInterExtraPolation/*.cpp")
+add_library(libCalcInterExtraPolation STATIC ${SOURCE})
