@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project (TestDynamicLibrary)
  
 #For the shared library:
-set ( PROJECT_LINK_LIBS libmy_library.so )
+set ( PROJECT_LINK_LIBS libmylibrary.so )
 link_directories(build-linux-x86)
 
 include_directories(include)
