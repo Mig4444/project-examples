@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/main.dir/main.cpp.o  -o main   -L/home/mig/Documents/github/project-examples/cmake-dynamic-library/build-linux-x86  -Wl,-rpath,/home/mig/Documents/github/project-examples/cmake-dynamic-library/build-linux-x86 -lmy_library 
