@@ -3,7 +3,7 @@
 ## Description
 
 This is an example of a cmake based application project.
-One CMake is used to add a shared library to an applicatio
+CMake is used to add a shared library to an applicatio.
 The shared library calculates the average between two  angles.
 
 ## Build
