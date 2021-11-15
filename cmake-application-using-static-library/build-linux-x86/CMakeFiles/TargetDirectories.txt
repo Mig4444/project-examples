@@ -1,3 +1,0 @@
-/home/mig/Documents/github/project-examples/cmake-application-using-static-library/build-linux-x86/CMakeFiles/rebuild_cache.dir
-/home/mig/Documents/github/project-examples/cmake-application-using-static-library/build-linux-x86/CMakeFiles/edit_cache.dir
-/home/mig/Documents/github/project-examples/cmake-application-using-static-library/build-linux-x86/CMakeFiles/main.dir
