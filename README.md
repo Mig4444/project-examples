@@ -19,3 +19,5 @@ Collection of project samples to get started.
 - [gui-wxwidgets](gui-wxwidgets/README.md)
 
 ### C projects
+
+- [demo-medical-device](demo-medical-device/README.md)
