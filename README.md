@@ -17,3 +17,5 @@ Collection of project samples to get started.
 ### GUI Based projects
 
 - [gui-wxwidgets](gui-wxwidgets/README.md)
+
+### MVC in C projects
