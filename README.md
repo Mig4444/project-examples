@@ -18,4 +18,4 @@ Collection of project samples to get started.
 
 - [gui-wxwidgets](gui-wxwidgets/README.md)
 
-### MVC in C projects
+### C projects
