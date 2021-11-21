@@ -39,7 +39,7 @@ bool elapsedTime(clock_t previousTime, double msElapsedTime)
 		/* Time elapsed*/
 		result = true;
 	}
-	else if(currTime < previousTime)
+	else if(currTime < previousTime) /* Several possibilities*/
 	{
 		/* Timer rollover*/
 		result = true;
@@ -62,13 +62,15 @@ void *scheduler_view_thread()
 	{
 		clock_t previousTime = getTick();
 		while( (false == elapsedTime(previousTime, WAIT_5S)) &&
-			   (model->get_device_state() == On) )
+			   (model->get_device_state() != Off) )
 		{
 
 		}
 		view_get_instance()->draw();
 	}
 	printf("Model is Off...Thanks for your attention\n");
+
+	return NULL;
 }
 
 /* brief/	Function pointer used by the thread
@@ -84,6 +86,7 @@ void *scheduler_controller_thread()
 		scheduler_command_reception(input);
 	}
 
+	return NULL;
 }
 
 /*! \brief Function that triggers the correct action in function of the inputs
