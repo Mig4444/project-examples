@@ -6,12 +6,7 @@
 typedef struct
 {
 	/* return void - Ptr*/
-	void (*draw_ptr)();
-	void (*set_duration_ptr)(uint8_t);
-	void (*set_program_ptr)(uint8_t);
-	void (*set_intensity_ptr)(uint8_t);
-	void (*set_hour_ptr)(uint8_t);
-	void (*set_battery_ptr)(uint8_t);
+	void (*draw)();
 }view_s;
 
 /* Public Method*/
