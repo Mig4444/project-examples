@@ -44,6 +44,7 @@ view_s* view_get_instance()
 
 void view_destroy_instance()
 {
+	printf("View Controller\n");
 	free(view_get_instance());
 }
 
