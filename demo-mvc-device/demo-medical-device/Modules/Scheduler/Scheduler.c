@@ -26,7 +26,7 @@ clock_t getTick()
 	return  times(&tms);
 }
 
-/* brief/
+/* brief/ This function compares the previous and current time
  *
  * */
 bool elapsedTime(clock_t previousTime, double msElapsedTime)
@@ -52,8 +52,8 @@ bool elapsedTime(clock_t previousTime, double msElapsedTime)
 	return result;
 }
 
-/* brief/
- *
+/* brief/ 	Function pointer used by the thread
+ *			Established the frequency in which the view is refreshed
  * */
 void *scheduler_view_thread()
 {
@@ -71,8 +71,8 @@ void *scheduler_view_thread()
 	printf("Model is Off...Thanks for your attention\n");
 }
 
-/* brief/
- *
+/* brief/	Function pointer used by the thread
+ *			This function retrieves the input commands from user
  * */
 void *scheduler_controller_thread()
 {
@@ -86,7 +86,7 @@ void *scheduler_controller_thread()
 
 }
 
-/*! \brief
+/*! \brief Function that triggers the correct action in function of the inputs
  */
 void scheduler_command_reception(uint8_t command)
 {
@@ -122,8 +122,9 @@ void scheduler_command_reception(uint8_t command)
 	}
 }
 
-/* brief/
- *
+/* brief/ 	Creation of threads
+ * 			Prints error if the thread was not created
+ * 			Implements a join to wait for all threads to be finished
  * */
 void createThreads()
 {

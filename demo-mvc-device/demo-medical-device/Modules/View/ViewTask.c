@@ -25,9 +25,10 @@ void view_display_separation_line();
 
 void view_draw();
 
-/*! \brief
+/*! \brief View class method
+ * 		   This method serves as a constructor, first time its called
+ * 		   This method serves as a mean to retrieve the unique instance of View
  */
-
 view_s* view_get_instance()
 {
 	static view_s *view_instance_m = NULL;

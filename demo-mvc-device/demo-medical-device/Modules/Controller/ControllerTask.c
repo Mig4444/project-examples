@@ -5,6 +5,8 @@
  *      Author: mig
  */
 
+#include <stdio.h>
+
 #include "ControllerTask.h"
 #include "ModelTask.h"
 
@@ -17,6 +19,10 @@ void controller_program_reset();
 void controller_device_state();
 void controller_program_state();
 
+/*! \brief Controller class method
+ * 		   This method serves as a constructor, first time its called
+ * 		   This method serves as a mean to retrieve the unique instance of Controller
+ */
 controller_s *controller_get_instance()
 {
 	static controller_s* controller_instance_m = NULL;
@@ -38,12 +44,11 @@ controller_s *controller_get_instance()
 	return controller_instance_m;
 }
 
-/*! \brief
- *
+/*! \brief 	Logic when increasing the program
+ *			When increasing the program a rollover is implemented
  */
 void controller_program_increase()
 {
-	//Read current value of program
 	model_s *model_m = model_get_instance();
 	uint8_t progConf = model_m->get_value_program();
 
@@ -57,8 +62,11 @@ void controller_program_increase()
 	}
 }
 
-/*! \brief
- *
+/*! \brief	Logic when increasing the intensity
+ * 			Increases the intensity value by one.
+ *			When increase is requested and maximum is reached or
+ *			an incorrect superior value is detected
+ *			Then the intensity value fixed to Maximum Intensity value
  */
 void controller_intensity_increase ()
 {
@@ -76,8 +84,12 @@ void controller_intensity_increase ()
 	}
 }
 
-/*! \brief
- *
+/*! \brief	Logic when decreasing the intensity
+ * 			Decreases the intensity value by one.
+ *			When decrease is requested and minimum is reached or
+ *			an incorrect inferior value is detected
+ *			Then the intensity value fixed to Minimum Intensity value
+ *			Minimum value is mostly used for future evolutions
  */
 void controller_intensity_decrease ()
 {
@@ -94,8 +106,8 @@ void controller_intensity_decrease ()
 	}
 }
 
-/*! \brief
- *
+/*! \brief	Logic when the program is reseted
+ * 			Passing the device to Config state
  */
 void controller_program_reset ()
 {
@@ -103,6 +115,12 @@ void controller_program_reset ()
 	model->set_value_state(Config);
 }
 
+/*! \brief	Logic when the program passes from
+ * 			Config -> Run
+ * 			Run -> Pause
+ * 			or
+ * 			Pause -> Run
+ */
 void controller_program_state()
 {
 	model_s *model = model_get_instance();
@@ -129,8 +147,8 @@ void controller_program_state()
 	}
 }
 
-/*! \brief
- *
+/*! \brief 	Logic when the device is turned Off or On
+ *			This is entirely a simulation
  */
 void controller_device_state ()
 {
@@ -149,7 +167,7 @@ void controller_device_state ()
 	}
 }
 
-/*! \brief
+/*! \brief	Destroy the current instance of the Controller
  */
 void controller_destroy_instance()
 {

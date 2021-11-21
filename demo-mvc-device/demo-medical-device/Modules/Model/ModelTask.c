@@ -39,7 +39,9 @@ uint8_t model_get_value_battery();
 void model_set_device_state(deviceState_e deviceState);
 deviceState_e model_get_device_state();
 
-/*! \brief
+/*! \brief Model class method
+ * 		   This method serves as a constructor, first time its called
+ * 		   This method serves as a mean to retrieve the unique instance of Model
  */
 model_s* model_get_instance()
 {
@@ -96,7 +98,7 @@ void model_set_value_program(uint8_t program)
 	program_m = program;
 }
 
-/*! \brief
+/*! \brief Getter in order to retrieve which is the current selected program
  */
 uint8_t model_get_value_program()
 {
@@ -104,14 +106,15 @@ uint8_t model_get_value_program()
 }
 
 
-/*! \brief
+/*! \brief Getter in order to retrive the current duration of the program
  */
 uint8_t model_get_value_duration()
 {
 	return duration_m;
 }
 
-/*! \brief
+/*! \brief 	Setter of the current state of the program
+ * 			state values are Config, Running, Pause
  */
 void model_set_value_state(uint8_t state)
 {
@@ -127,14 +130,15 @@ void model_set_value_state(uint8_t state)
 }
 
 
-/*! \brief
+/*! \brief	Getter of the current program state
+ * 			state values are Config, Running, Pause
  */
 uint8_t model_get_value_state()
 {
 	return state_m;
 }
 
-/*! \brief
+/*! \brief Setter of the current instensity
  */
 void model_set_value_intensity(uint8_t intensity)
 {
@@ -150,14 +154,16 @@ void model_set_value_intensity(uint8_t intensity)
 	intensity_m = intensity;
 }
 
-/*! \brief
+/*! \brief Getter of the current intensity
  */
 uint8_t model_get_value_intensity()
 {
 	return intensity_m;
 }
 
-/*! \brief
+/*! \brief 	Getter of the current hour
+ * 			As no logic is needed, the hour of the system is retrieved
+ * 			On the future this can be interfaced with an external system
  */
 uint8_t model_get_value_hour()
 {
@@ -167,7 +173,9 @@ uint8_t model_get_value_hour()
 	return hour_m;
 }
 
-/*! \brief
+/*! \brief	Getter of the current minutes
+ * 			As no logic is needed, the hour of the system is retrieved
+ * 			On the future this can be interfaced with an external system
  */
 uint8_t model_get_value_minutes()
 {
@@ -177,29 +185,32 @@ uint8_t model_get_value_minutes()
 	return minutes_m;
 }
 
-/*! \brief
+/*! \brief	Getter of the current battery status
+ * 			As no logic is needed, the hour of the system is retrieved
+ * 			On the future this can be interfaced with an external system
  */
 uint8_t model_get_value_battery()
 {
 	return battery_m;
 }
 
-/*! \brief
+/*! \brief	Getter of the current device state
+ *			Device states are On or Off
  */
 deviceState_e model_get_device_state()
 {
 	return deviceState_m;
 }
 
-/*! \brief
+/*! \brief 	Setter of the current device state
+ *			Device states are On or Off
  */
 void model_set_device_state(deviceState_e deviceState)
 {
-	//printf("model_set_device_state = %d\n",deviceState);
 	deviceState_m = deviceState;
 }
 
-/*! \brief
+/*! \brief Destroy the current instance of the object
  */
 void model_destroy_instance()
 {
