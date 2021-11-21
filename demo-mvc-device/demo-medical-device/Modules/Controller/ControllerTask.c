@@ -171,5 +171,6 @@ void controller_device_state ()
  */
 void controller_destroy_instance()
 {
+	printf("Destroy Controller\n");
 	free(controller_get_instance());
 }

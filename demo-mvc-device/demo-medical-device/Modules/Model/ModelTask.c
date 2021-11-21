@@ -50,7 +50,7 @@ model_s* model_get_instance()
 	if(NULL == model_instance_m)
 	{
 		model_instance_m = (model_s*)malloc(sizeof(model_s));
-		battery_m = 0;
+		battery_m = 100;
 		duration_m = 0;
 		hour_m = 0;
 		intensity_m = INTENSITY_MIN;
@@ -214,5 +214,6 @@ void model_set_device_state(deviceState_e deviceState)
  */
 void model_destroy_instance()
 {
+	printf("Model Controller\n");
 	free(model_get_instance());
 }
