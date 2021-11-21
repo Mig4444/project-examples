@@ -7,6 +7,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <sys/times.h>
+
 #include "typeslocal.h"
 #include "string.h"
 
@@ -54,16 +57,16 @@ model_s* model_get_instance()
 		state_m = Config;
 		deviceState_m = On;
 
-		model_instance_m->set_value_program_ptr = &model_set_value_program;
-		model_instance_m->get_value_program_ptr = &model_get_value_program;
-		model_instance_m->get_value_duration_ptr = &model_get_value_duration;
-		model_instance_m->set_value_state_ptr = &model_set_value_state;
+		model_instance_m->set_value_program = &model_set_value_program;
+		model_instance_m->get_value_program = &model_get_value_program;
+		model_instance_m->get_value_duration = &model_get_value_duration;
+		model_instance_m->set_value_state = &model_set_value_state;
 		model_instance_m->get_value_state = &model_get_value_state;
-		model_instance_m->set_value_intensity_ptr = &model_set_value_intensity;
-		model_instance_m->get_value_intensity_ptr = &model_get_value_intensity;
-		model_instance_m->get_value_hour_ptr = &model_get_value_hour;
-		model_instance_m->get_value_minutes_ptr = &model_get_value_minutes;
-		model_instance_m->get_value_battery_ptr = &model_get_value_battery;
+		model_instance_m->set_value_intensity = &model_set_value_intensity;
+		model_instance_m->get_value_intensity = &model_get_value_intensity;
+		model_instance_m->get_value_hour = &model_get_value_hour;
+		model_instance_m->get_value_minutes = &model_get_value_minutes;
+		model_instance_m->get_value_battery = &model_get_value_battery;
 		model_instance_m->set_device_state = &model_set_device_state;
 		model_instance_m->get_device_state = &model_get_device_state;
 
@@ -89,7 +92,7 @@ void model_set_value_program(uint8_t program)
 	{
 		/* Nothing to do */
 	}
-	//printf("model_set_value_program = P%d\n",program);
+
 	program_m = program;
 }
 
@@ -97,7 +100,6 @@ void model_set_value_program(uint8_t program)
  */
 uint8_t model_get_value_program()
 {
-	//printf("model_get_value_program = P%d\n",program_m);
 	return program_m;
 }
 
@@ -106,7 +108,6 @@ uint8_t model_get_value_program()
  */
 uint8_t model_get_value_duration()
 {
-	//printf("model_get_value_duration = %d\n",duration_m);
 	return duration_m;
 }
 
@@ -114,7 +115,6 @@ uint8_t model_get_value_duration()
  */
 void model_set_value_state(uint8_t state)
 {
-	//printf("model_set_value_state = %d\n",state);
 	state_m = state;
 	if(Config == state_m)
 	{
@@ -131,7 +131,6 @@ void model_set_value_state(uint8_t state)
  */
 uint8_t model_get_value_state()
 {
-	//printf("model_get_value_state = %d\n",state_m);
 	return state_m;
 }
 
@@ -148,7 +147,6 @@ void model_set_value_intensity(uint8_t intensity)
 	{
 		/* Nothing to do */
 	}
-	//printf("model_set_value_intensity = %d\n",intensity);
 	intensity_m = intensity;
 }
 
@@ -156,7 +154,6 @@ void model_set_value_intensity(uint8_t intensity)
  */
 uint8_t model_get_value_intensity()
 {
-	//printf("model_get_value_intensity = %d\n",intensity_m);
 	return intensity_m;
 }
 
@@ -164,7 +161,9 @@ uint8_t model_get_value_intensity()
  */
 uint8_t model_get_value_hour()
 {
-	//printf("model_get_value_hour = %d\n",hour_m);
+	time_t t = time(NULL);
+	struct tm tm = *localtime(&t);
+	hour_m = tm.tm_hour;
 	return hour_m;
 }
 
@@ -172,7 +171,9 @@ uint8_t model_get_value_hour()
  */
 uint8_t model_get_value_minutes()
 {
-	//printf("model_get_value_minutes = %d\n",minutes_m);
+	time_t t = time(NULL);
+	struct tm tm = *localtime(&t);
+	minutes_m = tm.tm_min;
 	return minutes_m;
 }
 
@@ -180,7 +181,6 @@ uint8_t model_get_value_minutes()
  */
 uint8_t model_get_value_battery()
 {
-	//printf("model_get_value_battery = %d\n",battery_m);
 	return battery_m;
 }
 

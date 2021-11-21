@@ -8,14 +8,14 @@
 #ifndef SCHEDULER_H_
 #define SCHEDULER_H_
 
-#include "../../Modules/Scheduler/Scheduler.h"
-
 #include <time.h>
 #include <sys/times.h>
 
-#include "../../Modules/GlobalFiles/typeslocal.h"
+#include "typeslocal.h"
 
-#define STOPWATCH_NB_MAX 25
+#define WAIT_10S	1000
+#define WAIT_5S		500
+#define WAIT_1S		100
 
 typedef struct
 {
@@ -25,11 +25,11 @@ typedef struct
 	uint8_t reached;
 }Stopwatch_t;
 
-static Stopwatch_t stopWatch[STOPWATCH_NB_MAX];//ct0, ct1;
-static uint8_t currStopwatches = 0;
 struct tms tms;
 
-clock_t getClockTime();
-void initSchedulers();
+clock_t getTick();
+bool elapsedTime(clock_t previousTime, double msElapsedTime);
+void scheduler_command_reception(uint8_t command);
+void createThreads();
 
 #endif /* SCHEDULER_H_ */

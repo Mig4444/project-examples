@@ -5,11 +5,11 @@
 
 typedef struct
 {
-	void (*program_increase)();
-	void (*intensity_increase)();
-	void (*intensity_decrease)();
-	void (*program_reset)();
 	void (*device_on_off)();
+	void (*intensity_decrease)();
+	void (*intensity_increase)();
+	void (*program_increase)();
+	void (*program_reset)();
 	void (*program_state)();
 	void (*device_state)();
 }controller_s;

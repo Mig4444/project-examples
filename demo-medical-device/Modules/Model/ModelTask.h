@@ -17,18 +17,18 @@ typedef enum
 
 typedef struct
 {
-	void (*set_value_program_ptr)(uint8_t);
-	uint8_t (*get_value_program_ptr)();
-	uint8_t (*get_value_duration_ptr)();
-	void (*set_value_state_ptr)(uint8_t);
+	void (*set_value_program)(uint8_t);
+	uint8_t (*get_value_program)();
+	uint8_t (*get_value_duration)();
+	void (*set_value_state)(uint8_t);
 	deviceState_e (*get_device_state)();
 	void (*set_device_state)(deviceState_e);
 	uint8_t (*get_value_state)();
-	void (*set_value_intensity_ptr)(uint8_t);
-	uint8_t (*get_value_intensity_ptr)();
-	uint8_t (*get_value_hour_ptr)();
-	uint8_t (*get_value_minutes_ptr)();
-	uint8_t (*get_value_battery_ptr)();
+	void (*set_value_intensity)(uint8_t);
+	uint8_t (*get_value_intensity)();
+	uint8_t (*get_value_hour)();
+	uint8_t (*get_value_minutes)();
+	uint8_t (*get_value_battery)();
 } model_s;
 
 typedef enum
