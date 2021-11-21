@@ -20,4 +20,4 @@ Collection of project samples to get started.
 
 ### C projects
 
-- [demo-medical-device](demo-medical-device/README.md)
+- [demo-mvc-device](demo-mvc-device/README.md)
