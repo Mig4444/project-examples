@@ -80,6 +80,7 @@ void *scheduler_controller_thread()
 {
 	uint8_t input;
 	model_s *model = model_get_instance();
+
 	while (model->get_device_state() == On)
 	{
 		scanf("%c",&input);
