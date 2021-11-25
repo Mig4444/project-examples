@@ -1,7 +1,4 @@
-//Test de un Hello World en wxWidgets Antonio Villanueva
-
-//g++ -Wall -static-libstdc++ -std=c++11 -Wunused-but-set-variable `wx-config --cxxflags` -o hola *.cpp `wx-config --libs`
-//Declara la clase aplicacion
+//Test de un Hello World en wxWidgets
 
 //#include "imagen.xpm" //Imagen en formato xpm
 #include <iostream>
