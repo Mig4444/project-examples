@@ -1,0 +1,12 @@
+/*
+ * GuiHandlingApi.h
+ *
+ *  Created on: 25 nov. 2021
+ *      Author: mig
+ */
+
+#ifndef GUIMODULE_GUIHANDLINGAPI_GUIHANDLINGAPI_H_
+#define GUIMODULE_GUIHANDLINGAPI_GUIHANDLINGAPI_H_
+
+
+#endif /* GUIMODULE_GUIHANDLINGAPI_GUIHANDLINGAPI_H_ */
