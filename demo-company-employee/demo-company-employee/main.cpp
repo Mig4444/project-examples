@@ -1,6 +1,6 @@
 #include <QApplication>
 #include <QDebug>
-#include "tabdialog.h"
+#include "view.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,8 +18,9 @@ int main(int argc, char *argv[])
         fileName = ".";
     }
 
-    TabDialog tabdialog(fileName);
+    TabDialog tabdialog;
     tabdialog.show();
+
 
     return app.exec();
 }
